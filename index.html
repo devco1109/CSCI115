@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devslist.ca</title>
+    <style>
+        
+    body {
+        margin: 0px;
+    }
+
+#homeHeader {
+    background-color: rgb(178, 0, 178);
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color:white;
+    font-size:xxx-large;
+
+}
+
+#sitecontent {
+    padding: 0;
+    display: flex;
+    width:100%;
+}
+
+.navBar {
+    width: 82px;
+    height: 1000px;
+    flex: 1000px 82px;
+}
+
+.saleItems {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-template-rows: auto auto auto auto;
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+}
+
+.grid-item {
+    box-sizing: border-box;
+    column-gap: 16px;
+    row-gap: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    height: min-content;
+    border: 0.01px solid black;
+    background-color: white;
+   
+}
+
+.imagelink{
+    width:100%;
+    height:50%;
+}
+
+.imageSizer{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 0px;
+   
+}
+
+.adphoto{
+    width:100%;
+    height:100%;
+    border-bottom:0.5px solid black;
+}
+
+.adinfo {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    padding-bottom:0px;
+   
+}
+
+.itemTitle {
+    font-weight: bold;
+    font-size: x-large;
+    margin:0px 2px;
+    
+}
+
+.seller {
+    color: gray;
+    font-style: italic;
+    margin:0px 2px;
+}
+
+.price {
+    font-size:xx-large;
+    margin:0px 2px;
+}
+
+
+.btnSeperator{
+    display:flex;
+    width:100%;
+    height:0%;
+}
+
+
+.gotoprod{
+    text-align: center;
+    margin-top:10px;
+    margin-right:10px;
+    width:150px;
+    height: 35px;
+    background-color: rgb(178, 0, 178);
+    color:white;
+    border:none;
+    border-radius: 17.5px;
+    transition:top ease 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.gotoprod:hover{
+    box-shadow: 3px 3px 15px blueviolet;
+    cursor:pointer;
+    top:-5px;
+}
+
+.gotoprod:active{
+    opacity: 0.9;
+}
+
+.sellerPrice{
+    width:50%;
+}
+
+hr{
+    margin:0px;
+}
+
+/* https://www.w3schools.com/cssref/atrule_media.php */
+
+@media only screen and (max-width: 600px) {
+    .saleItems{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: auto;
+        gap: 10px; 
+        padding: 0px;
+        width: 100%;
+        background-color: rgb(234, 234, 234);
+    }
+    .navBar{
+        display: none;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <header id="homeHeader"> Dev's List
+    </header>
+    
+    <div id="sitecontent">
+        
+        <div class="navBar">
+            <ul>
+                <li>Auto</li>
+                <li>Home gs</li>
+                <li></li>
+            </ul>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, adipisci magni sit nisi vero totam odit at consequuntur porro reprehenderit autem neque facilis quae hic.
+        </div>
+
+        <div class="saleItems">
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">mat win</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/randoVW.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">VW Golf, I know what i have!!</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">George Jenkins</p>
+                                <p class="price">$200,000</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/theLada.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Pristine Lada </p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">Raj apreen</p>
+                                <p class="price">$1,500</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/woodDice.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">RARE!!wooden dice</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">John Smith</p>
+                                <p class="price">$50</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/cats.jpeg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Cats &#40must go to good home&#41</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">Jane Doe</p>
+                                <p class="price">$200</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/sickboat.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Sick boat</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">The dude</p>
+                                <p class="price">$12,000</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/Apartment1.jpeg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Aparment for rent&#40Nananimo&#41</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">albert newton</p>
+                                <p class="price">$2,100</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/Apartment2.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Nanaimo apartment for rent</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">Isiacc einstein</p>
+                                <p class="price">$1,900</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle"></p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">Some dude</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">Dev co</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">big buck</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">lil mark</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">big mark</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">John Doe</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">Jane smith</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="imageSizer">
+                        <a class="imagelink" href="./page1.html">
+                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        </a>
+                    </div>
+                    <div class="adinfo">
+                        <p class="itemTitle">Beat up old truck</p>
+                        <hr>
+                          <div class="btnSeperator"> 
+                            <div class="sellerPrice">
+                                <p class="seller">jeremy wilcox</p>
+                                <p class="price">$2,700</p>
+                            </div>
+                            <div class="btnInquire">
+                                <a href="page1.html">
+                                    <button class="gotoprod">see more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+              
+                
+        
+        </div>
+    </div>
+
+
+</body>
+</html>
