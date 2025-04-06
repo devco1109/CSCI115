@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    
+    ol {
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 20px;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding-left: 5px;
+    }
+    
+    ul li {
+      margin-bottom: 5px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+      font-size: 16px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    #results {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Health Survey</h1>
+    
+    <form id="surveyForm">
+      <ol>
+        <li>
+          <label>Have you or a loved one ever been diagnosed with mesothelioma?</label>
+          <ul>
+            <li>
+              <input type="radio" id="diagnosed-yes" name="diagnosed" value="Yes" required>
+              <label for="diagnosed-yes">Yes</label>
+            </li>
+            <li>
+              <input type="radio" id="diagnosed-no" name="diagnosed" value="No">
+              <label for="diagnosed-no">No</label>
+            </li>
+          </ul>
+        </li>
+        
+        <li>
+          <label>Were you born between the years of 1969 and 2017?</label>
+          <ul>
+            <li>
+              <input type="radio" id="birth-yes" name="birthYearRange" value="Yes" required>
+              <label for="birth-yes">Yes</label>
+            </li>
+            <li>
+              <input type="radio" id="birth-no" name="birthYearRange" value="No">
+              <label for="birth-no">No</label>
+            </li>
+          </ul>
+        </li>
+        
+        <li>
+          <label for="birthYear">What year were you born?</label>
+          <input type="number" id="birthYear" name="birthYear" min="1900" max="2024">
+        </li>
+        
+        <li>
+          <label for="diagnosisAge">How old were you when you were diagnosed? (Enter N/A if not applicable)</label>
+          <input type="text" id="diagnosisAge" name="diagnosisAge" placeholder="Enter age or N/A">
+        </li>
+      </ol>
+      
+      <button type="submit">Submit Survey</button>
+    </form>
+    
+    <div id="results">
+      <h2>Thank you for completing the survey</h2>
+      <p>Your responses have been recorded.</p>
+      <table id="responsesTable">
+        <tr>
+          <th>Question</th>
+          <th>Your Answer</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('surveyForm');
+      const results = document.getElementById('results');
+      const table = document.getElementById('responsesTable');
+      
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Get form data
+        const diagnosed = document.querySelector('input[name="diagnosed"]:checked').value;
+        const birthYearRange = document.querySelector('input[name="birthYearRange"]:checked').value;
+        const birthYear = document.getElementById('birthYear').value;
+        const diagnosisAge = document.getElementById('diagnosisAge').value;
+        
+        // Add rows to table
+        addTableRow("Diagnosed with mesothelioma", diagnosed);
+        addTableRow("Born between 1969 and 2017", birthYearRange);
+        addTableRow("Birth year", birthYear || "Not provided");
+        addTableRow("Age at diagnosis", diagnosisAge || "Not provided");
+        
+        // Hide form, show results
+        form.style.display = 'none';
+        results.style.display = 'block';
+      });
+      
+      function addTableRow(question, answer) {
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        cell1.textContent = question;
+        cell2.textContent = answer;
+      }
+    });
+  </script>
+</body>
+</html>

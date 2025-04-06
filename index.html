@@ -10,29 +10,28 @@
         margin: 0px;
     }
 
-#homeHeader {
-    background-color: rgb(178, 0, 178);
-    height: 50px;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    color:white;
-    font-size:xxx-large;
+    #homeHeader {
+        background-color: rgb(149, 6, 22);
+        height: 50px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        color:white;
+        font-size:xxx-large;
+    }
 
-}
+    #sitecontent {
+        padding: 0;
+        display: flex;
+        width:100%;
+    }
 
-#sitecontent {
-    padding: 0;
-    display: flex;
-    width:100%;
-}
-
-.navBar {
-    width: 82px;
-    height: 1000px;
-    flex: 1000px 82px;
-}
+    .navBar {
+        width: 115px;
+        height: 1000px;
+        text-align: center;
+    }
 
 .saleItems {
     display: grid;
@@ -115,13 +114,14 @@
     margin-right:10px;
     width:150px;
     height: 35px;
-    background-color: rgb(178, 0, 178);
+    background-color: rgb(149, 6, 22);
     color:white;
     border:none;
     border-radius: 17.5px;
     transition:top ease 0.3s;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .gotoprod:hover{
@@ -141,6 +141,25 @@
 hr{
     margin:0px;
 }
+
+.adpic{
+    border:1px solid black;
+}
+.advertisement{
+    font-size: large;
+    border:1px solid black;
+    padding:2px;
+}
+
+.ad{
+    text-decoration: none;
+}
+
+.btnlink{
+    text-decoration: none;
+    color:white;
+}
+
 
 /* https://www.w3schools.com/cssref/atrule_media.php */
 
@@ -172,19 +191,22 @@ hr{
     <div id="sitecontent">
         
         <div class="navBar">
-            <ul>
-                <li>Auto</li>
-                <li>Home gs</li>
-                <li></li>
-            </ul>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, adipisci magni sit nisi vero totam odit at consequuntur porro reprehenderit autem neque facilis quae hic.
+            <a class="ad" href="./SurevyAd.html">
+                <div class="advertisement">
+                    <em>Advertisement</em>
+                    <hr style="color:black; width:100%;">
+                    Have you or a loved one been diagnosed with mesothelioma? <br> <br> <img class=adpic alt="mesothelioma infograph"   src="./img/mesothelioma.jpeg"> <br><br> Take our survey!
+                </div>
+            </a>
         </div>
+
 
         <div class="saleItems">
 
                 <div class="grid-item">
                     <div class="imageSizer">
-                        <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                        <a class="imagelink" href="./TruckAd.html">
+                            <img class="adphoto" alt="ford truck" src="./img/ford-truck.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
@@ -196,9 +218,10 @@ hr{
                                 <p class="price">$2,700</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <!--This button was supposed to be a link but having an "a" element as a descendent of a "button" element or vice versa is an html error-->
+                                    <button class="gotoprod">
+                                            see more
+                                    </button>
                             </div>
                         </div>
                     </div>
@@ -206,8 +229,8 @@ hr{
 
                 <div class="grid-item">
                     <div class="imageSizer">
-                        <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/randoVW.jpg">
+                        <a class="imagelink" href="./VWAd.html">
+                            <img class="adphoto" alt="overpriced VW car" src="./img/randoVW.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
@@ -219,9 +242,9 @@ hr{
                                 <p class="price">$200,000</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -230,7 +253,7 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/theLada.jpg">
+                            <img class="adphoto" alt="sick lada" src="./img/LADACAR.jpeg">
                         </a>
                     </div>
                     <div class="adinfo">
@@ -242,9 +265,9 @@ hr{
                                 <p class="price">$1,500</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -252,8 +275,8 @@ hr{
 
                 <div class="grid-item">
                     <div class="imageSizer">
-                        <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/woodDice.jpg">
+                        <a class="imagelink" href="./WoodDie.html">
+                            <img class="adphoto"  alt="wooden dice" src="./img/woodDice.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
@@ -265,9 +288,9 @@ hr{
                                 <p class="price">$50</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -276,11 +299,11 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/cats.jpeg">
+                            <img class="adphoto"  alt="cat litter" src="./img/cats.jpeg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Cats &#40must go to good home&#41</p>
+                        <p class="itemTitle">Cats &#40;must go to good home&#41;</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
@@ -288,9 +311,9 @@ hr{
                                 <p class="price">$200</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -299,7 +322,7 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/sickboat.jpg">
+                            <img class="adphoto" alt="sick boat" src="./img/sickboat.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
@@ -311,9 +334,9 @@ hr{
                                 <p class="price">$12,000</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -321,12 +344,12 @@ hr{
 
                 <div class="grid-item">
                     <div class="imageSizer">
-                        <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/Apartment1.jpeg">
+                        <a class="imagelink" href="./ApartmentPage1.html">
+                            <img class="adphoto" alt="apartment one" src="./img/Apartment1.jpeg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Aparment for rent&#40Nananimo&#41</p>
+                        <p class="itemTitle">Aparment for rent-Nananimo</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
@@ -334,9 +357,9 @@ hr{
                                 <p class="price">$2,100</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -344,8 +367,8 @@ hr{
 
                 <div class="grid-item">
                     <div class="imageSizer">
-                        <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/Apartment2.jpg">
+                        <a class="imagelink" href="./ApartmentPage2.html">
+                            <img class="adphoto" alt="apartment two" src="./img/Apartment2.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
@@ -357,9 +380,9 @@ hr{
                                 <p class="price">$1,900</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -368,21 +391,21 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="crazy flying elaphant" src="./img/sickelaphant.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle"></p>
+                        <p class="itemTitle">crazy flying elaphant</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
                                 <p class="seller">Some dude</p>
-                                <p class="price">$2,700</p>
+                                <p class="price">$1,000,000</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -391,21 +414,21 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="apple laptop" src="./img/macbook1.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Beat up old truck</p>
+                        <p class="itemTitle">Mac laptop</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
                                 <p class="seller">Dev co</p>
-                                <p class="price">$2,700</p>
+                                <p class="price">$750</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -414,21 +437,21 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="iphone an loose airpods" src="./img/iphone.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Beat up old truck</p>
+                        <p class="itemTitle">Iphone & airpod combo</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
                                 <p class="seller">big buck</p>
-                                <p class="price">$2,700</p>
+                                <p class="price">$1,550</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -437,21 +460,21 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="keychain" src="./img/keychain.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Beat up old truck</p>
+                        <p class="itemTitle">Leather Keychain</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
                                 <p class="seller">lil mark</p>
-                                <p class="price">$2,700</p>
+                                <p class="price">$20</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -460,21 +483,21 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="lawnchair" src="./img/lawnchair.jpeg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Beat up old truck</p>
+                        <p class="itemTitle">Prime lawn chair</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
                                 <p class="seller">big mark</p>
-                                <p class="price">$2,700</p>
+                                <p class="price">$40</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -483,21 +506,21 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="adirondack chair" src="./img/adirondackChair.jpeg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Beat up old truck</p>
+                        <p class="itemTitle">custom adironcack chair</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
                                 <p class="seller">John Doe</p>
-                                <p class="price">$2,700</p>
+                                <p class="price">$200</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -506,21 +529,21 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="two telivisions" src="./img/tvs.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Beat up old truck</p>
+                        <p class="itemTitle">two TV's</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
                                 <p class="seller">Jane smith</p>
-                                <p class="price">$2,700</p>
+                                <p class="price">$2,150</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -529,34 +552,26 @@ hr{
                 <div class="grid-item">
                     <div class="imageSizer">
                         <a class="imagelink" href="./page1.html">
-                            <img class="adphoto" src="./img/ford-truck.jpg">
+                            <img class="adphoto" alt="game controller" src="./img/gamecontroller.jpg">
                         </a>
                     </div>
                     <div class="adinfo">
-                        <p class="itemTitle">Beat up old truck</p>
+                        <p class="itemTitle">Game controller</p>
                         <hr>
                           <div class="btnSeperator"> 
                             <div class="sellerPrice">
-                                <p class="seller">jeremy wilcox</p>
-                                <p class="price">$2,700</p>
+                                <p class="seller">Jeremy wilcox</p>
+                                <p class="price">$80</p>
                             </div>
                             <div class="btnInquire">
-                                <a href="page1.html">
-                                    <button class="gotoprod">see more</button>
-                                </a>
+                                <button class="gotoprod">
+                                        see more
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                
-                
-              
-                
-        
         </div>
     </div>
-
-
 </body>
 </html>
